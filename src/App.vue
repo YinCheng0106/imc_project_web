@@ -1,17 +1,19 @@
 <script setup>
 import WebTitle from './components/WebTitle.vue'
+import AttractionMenu  from './components/AttractionMenu.vue';
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <img alt="web_logo" class="logo" src="" width="125" height="125" />
 
     <div class="wrapper">
-      <WebTitle msg="You did it!" />
+      <WebTitle msg="魅力台中" />
     </div>
   </header>
 
   <main>
+    <AttractionMenu />
   </main>
 </template>
 
