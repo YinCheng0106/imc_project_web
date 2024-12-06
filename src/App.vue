@@ -5,8 +5,6 @@ import AttractionMenu  from './components/AttractionMenu.vue';
 
 <template>
   <header>
-    <img alt="web_logo" class="logo" src="" width="125" height="125" />
-
     <div class="wrapper">
       <WebTitle msg="魅力台中" />
     </div>
