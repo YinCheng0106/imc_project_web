@@ -23,10 +23,15 @@ const attraction_list = ref([
     <div>
       <ul class="attractions" >
         <li v-for="attr in attraction_list" :key="attr.id">
-          <img class="attr_img" :src="attr.img">
-          <h3 class="attr_title">{{ attr.name }}</h3>
+          <div class="attr_head">
+            <h3 class="attr_title">{{ attr.name }}</h3>
+            <img class="attr_img" :src="attr.img">
+          </div>
           <p class="attr_desc">{{ attr.desc }}</p>
-          <a class="attr_map" :href="attr.map_link" target="_blank">地圖</a>
+          <div class="link_group">
+            <a class="link" :href="attr.map_link" target="_blank">網頁</a>
+            <a class="link" :href="attr.map_link" target="_blank">地圖</a>
+          </div>
         </li>
       </ul>
     </div>
@@ -42,18 +47,29 @@ h2 {
 }
 
 h3 {
+  color: white;
   font-weight: bold;
   font-family: monospace;
   font-size: 1.5rem;
 }
 
-.attr_map {
-  /* float: right;  */
-  padding: 4px;
-  text-align: center;
-  color: black;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 4px;
+.attr_head {
+  display: inline;
+  padding: 12px
+}
+
+.attr_title {
+  display: inline;
+  float: inline-start;
+  padding: 12px;
+}
+
+.attr_img {
+  display: inline;
+  height: 64px;
+  width: 64px;
+  float: right;
+  border-radius: 12px;
 }
 
 .attr_desc {
@@ -65,16 +81,28 @@ ul {
 }
 
 li {
+  display: grid;
+  grid-template-rows: 1fr;
   padding: 8px;
   border-radius: 12px;
 }
 
-.attr_img {
-  height: 64px;
-  width: 64px;
-  margin-left: 12px;
+.link_group {
+  display: inline;
+  padding: 4px
+}
+
+.link {
   float: right;
-  border-radius: 12px;
+  padding: 4px;
+  margin-inline: 4px;
+  text-align: center;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+.padding {
+  padding: 2px;
 }
 
 @media (hover:hover){
@@ -91,13 +119,5 @@ li {
     display: grid;
     grid-template-columns: 2fr 2fr;
   }
-  .attr_img {
-    width: auto;
-    height: 128px;
-    margin-top: 48px;
-    padding: 12px;
-    border-radius: 24px;
-  }
 }
-
 </style>
