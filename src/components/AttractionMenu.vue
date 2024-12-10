@@ -28,7 +28,9 @@ const attraction_list = ref([
             <h3 class="attr_title">{{ attr.name }}</h3>
             <img class="attr_img" :src="attr.img">
           </div>
-          <p class="attr_desc">{{ attr.desc }}</p>
+          <div class="desc_group">
+            <p class="attr_desc">{{ attr.desc }}</p>
+          </div>
           <div class="link_group">
             <a class="link" :href="attr.map_link" target="_blank">網頁</a>
             <a class="link" :href="attr.map_link" target="_blank">地圖</a>
@@ -76,13 +78,13 @@ h3 {
 
 .attr_desc {
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 10;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
   transition: max-height 0.3s ease;
-  max-height: 3rem;
+  max-height: 10rem;
 }
 
 ul {
@@ -121,18 +123,29 @@ li {
   .attr_map:hover {
     background-color: rgb(255, 255, 255);
   }
-
-  li:hover .attr_desc {
-    -webkit-line-clamp: unset;
-    max-height: 100%;
-    overflow: visible;
-  }
 }
 
 @media (min-width: 1024px){
   .attractions {
     display: grid;
     grid-template-columns: 2fr 2fr;
+  }
+
+  .attr_desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  transition: max-height 0.3s ease;
+  max-height: 3rem;
+}
+
+  li:hover .attr_desc {
+    -webkit-line-clamp: unset;
+    max-height: 100%;
+    overflow: visible;
   }
 }
 </style>
