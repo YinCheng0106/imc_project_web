@@ -10,15 +10,9 @@
 a,
 .green {
   text-decoration: none;
-  color: rgb(191, 176, 42);
+  color: rgb(62, 118, 149);
   transition: 0.4s;
   padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: rgb(191, 176, 42, 0.2);
-  }
 }
 
 @media (min-width: 1024px) {

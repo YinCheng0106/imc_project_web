@@ -1,6 +1,7 @@
 <script setup>
 import WebTitle from './components/WebTitle.vue'
 import AttractionMenu  from './components/AttractionMenu.vue';
+import FooterLink from './components/FooterLink.vue';
 </script>
 
 <template>
@@ -13,6 +14,9 @@ import AttractionMenu  from './components/AttractionMenu.vue';
   <main>
     <AttractionMenu />
   </main>
+  <footer>
+    <FooterLink />
+  </footer>
 </template>
 
 <style scoped>
@@ -24,22 +28,4 @@ header {
   display: block;
   margin: 0 auto 2rem;
 }
-
-/* @media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / );
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-} */
 </style>
