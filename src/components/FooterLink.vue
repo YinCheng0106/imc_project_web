@@ -40,7 +40,7 @@ const footerLink = ref([
 
   @media (hover:hover){
     a:hover {
-      color: rgb(62, 118, 149, 0.7);;
+      color: rgba(255, 255, 255, 0.7);;
     }
   }
 

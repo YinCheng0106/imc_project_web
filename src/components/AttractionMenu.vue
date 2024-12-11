@@ -34,7 +34,7 @@ const attraction_list = ref([
             </p>
           </div>
           <div class="link_group">
-            <a class="link" :href="attr.web" target="_blank"><FontAwesomeIcon :icon="faUpRightFromSquare"/> 台中旅遊</a>
+            <a class="link" :href="attr.web" target="_blank"><FontAwesomeIcon :icon="faUpRightFromSquare"/> 臺中觀光旅遊網</a>
             <a class="link" :href="attr.map_link" target="_blank"><FontAwesomeIcon :icon="faMapPin"/> 地圖</a>
           </div>
         </li>
