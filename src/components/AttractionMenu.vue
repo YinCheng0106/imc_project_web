@@ -91,7 +91,8 @@ li {
 
 .link_group {
   display: inline;
-  padding: 4px
+  padding: 4px;
+  margin: 12px;
 }
 
 .link {
