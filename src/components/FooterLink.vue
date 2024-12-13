@@ -23,14 +23,15 @@ const footerLink = ref([
 
   ul {
     margin: 24px;
-    align-items: center;
     list-style: none;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
   li {
     text-align: center;
+    width: 100%;
     padding: 4px;
   }
 
@@ -48,6 +49,11 @@ const footerLink = ref([
     ul {
       display: grid;
       grid-template-columns: 2fr 2fr;
+    }
+
+    li {
+      width: 100%;
+      text-align: center;
     }
   }
 </style>

@@ -60,13 +60,14 @@ h3 {
 
 .attr_head {
   display: inline;
-  padding: 12px
+  padding: 4px;
+  margin: 4px;
 }
 
 .attr_title {
   display: inline;
   float: inline-start;
-  padding: 12px;
+  padding: 12px 12px 0 0;
 }
 
 .attr_img {
@@ -75,37 +76,41 @@ h3 {
   width: 64px;
   float: right;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 ul {
+  display: flex;
+  flex-direction: column;
   list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
 }
 
 li {
   display: grid;
   grid-template-rows: 1fr;
   padding: 8px;
+  margin: 0 auto;
   border-radius: 12px;
+  width: 100%;
 }
 
 .link_group {
   display: inline;
   padding: 4px;
-  margin: 12px;
+  margin: 4px;
 }
 
 .link {
   float: right;
   padding: 4px;
-  margin-inline: 4px;
+  margin-inline: 2px;
   text-align: center;
   color: black;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 4px;
-}
-.padding {
-  padding: 2px;
 }
 
 @media (hover:hover){
