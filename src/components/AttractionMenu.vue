@@ -17,114 +17,33 @@ const attraction_list = ref([
 </script>
 
 <template>
-  <div>
+  <div class="p-3 m-3">
     <div>
-      <h2>景點</h2>
+      <h2 class="text-3xl text-gray-400 font-mono p-2 m-1">景點</h2>
     </div>
     <div>
-      <ul class="lg:grid lg:grid-cols-2" >
-        <li v-for="attr in attraction_list" :key="attr.id">
-          <div class="attr_head">
-            <h3 class="attr_title">{{ attr.name }}</h3>
-            <img class="attr_img" :src="attr.img" :alt="attr.name">
+      <ul class="flex flex-col w-full list-none p-0 m-auto" >
+        <li class="grid grid-cols-1 p-2 rounded-xl m-auto hover:bg-gray-600" v-for="attr in attraction_list" :key="attr.id">
+          <div class="p-3 m-3 inline">
+            <h3 class="inline text-2xl font-bold float-start px-3 py-3 font-mono">{{ attr.name }}</h3>
+            <img class="inline w-16 h-16 float-right object-cover rounded-xl" :src="attr.img" :alt="attr.name">
           </div>
-          <div class="desc_group">
-            <p class="attr_desc">
+          <div class="m-1">
+            <p class="text-gray-400 hover:text-gray-50">
               {{ attr.desc }}
             </p>
           </div>
-          <div class="link_group">
-            <a class="link" :href="attr.web" target="_blank"><FontAwesomeIcon :icon="faUpRightFromSquare"/> 臺中觀光旅遊網</a>
-            <a class="link" :href="attr.map_link" target="_blank"><FontAwesomeIcon :icon="faMapPin"/> 地圖</a>
+          <div class="inline p-1 m-1 gap-2">
+            <a class="float-right p-1 mx-1 text-center text-stone-950 bg-gray-300 rounded-md hover:bg-gray-500" :href="attr.web" target="_blank"><FontAwesomeIcon :icon="faUpRightFromSquare"/> 臺中觀光旅遊網</a>
+            <a class="float-right p-1 mx-1 text-center text-stone-950 bg-gray-300 rounded-md hover:bg-gray-500" :href="attr.map_link" target="_blank"><FontAwesomeIcon :icon="faMapPin"/> 地圖</a>
           </div>
-        </li>
+      </li>
       </ul>
     </div>
   </div>
 </template>
 
 <style scoped>
-
-h2 {
-  font-weight: bold;
-  font-family: monospace;
-  font-size: 2rem;
-}
-
-h3 {
-  color: white;
-  font-weight: bold;
-  font-family: monospace;
-  font-size: 1.5rem;
-}
-
-.attr_head {
-  display: inline;
-  padding: 4px;
-  margin: 4px;
-}
-
-.attr_title {
-  display: inline;
-  float: inline-start;
-  padding: 12px 12px 0 0;
-}
-
-.attr_img {
-  display: inline;
-  height: 64px;
-  width: 64px;
-  float: right;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-ul {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  padding: 0;
-  margin: 0 auto;
-  width: 100%;
-}
-
-li {
-  display: grid;
-  grid-template-rows: 1fr;
-  padding: 8px;
-  margin: 0 auto;
-  border-radius: 12px;
-  width: 100%;
-}
-
-.link_group {
-  display: inline;
-  padding: 4px;
-  margin: 4px;
-}
-
-.link {
-  float: right;
-  padding: 4px;
-  margin-inline: 2px;
-  text-align: center;
-  color: black;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 4px;
-}
-
-@media (hover:hover){
-  li:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-  }
-  .attr_map:hover {
-    background-color: rgb(255, 255, 255);
-  }
-  a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-  }
-}
-
 @media (min-width: 1024px){
   .attractions {
     display: grid;
