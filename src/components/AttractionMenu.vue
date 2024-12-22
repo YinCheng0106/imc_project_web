@@ -22,7 +22,7 @@ const attraction_list = ref([
       <h2>景點</h2>
     </div>
     <div>
-      <ul class="attractions" >
+      <ul class="lg:grid lg:grid-cols-2" >
         <li v-for="attr in attraction_list" :key="attr.id">
           <div class="attr_head">
             <h3 class="attr_title">{{ attr.name }}</h3>
