@@ -11,49 +11,10 @@ const footerLink = ref([
 </script>
 
 <template>
-  <ul>
-    <li v-for="footer in footerLink" :key="footer.id" class="footerLink"><a :href="footer.link" target="_blank"><FontAwesomeIcon :icon="footer.icon"/> {{ footer.name }}</a></li>
+  <ul class="m-6 list-none grid grid-cols-2">
+    <li class="text-center w-full p-1" v-for="footer in footerLink" :key="footer.id">
+      <a class="bg-none hover:text-gray-400 dark:text-white dark:hover:text-gray-400" :href="footer.link" target="_blank">
+        <FontAwesomeIcon :icon="footer.icon"/> {{ footer.name }}
+      </a></li>
   </ul>
 </template>
-
-<style scoped>
-  a {
-    background-color: none;
-  }
-
-  ul {
-    margin: 24px;
-    list-style: none;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  li {
-    text-align: center;
-    width: 100%;
-    padding: 4px;
-  }
-
-  a {
-    border-radius: 12px;
-  }
-
-  @media (hover:hover){
-    a:hover {
-      color: rgba(255, 255, 255, 0.7);;
-    }
-  }
-
-  @media (min-width: 1024px){
-    ul {
-      display: grid;
-      grid-template-columns: 2fr 2fr;
-    }
-
-    li {
-      width: 100%;
-      text-align: center;
-    }
-  }
-</style>

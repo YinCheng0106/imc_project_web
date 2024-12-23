@@ -19,35 +19,24 @@ const attraction_list = ref([
 <template>
   <div class="p-3 m-3">
     <div>
-      <h2 class="text-3xl text-gray-400 font-mono p-2 m-1">景點</h2>
+      <h2 class="text-3xl dark:text-gray-400 font-mono font-bold p-2 m-1">景點</h2>
     </div>
     <div>
-      <ul class="flex flex-col w-full list-none p-0 m-auto" >
-        <li class="grid grid-cols-1 p-2 rounded-xl m-auto hover:bg-gray-600" v-for="attr in attraction_list" :key="attr.id">
-          <div class="p-3 m-3 inline">
-            <h3 class="inline text-2xl font-bold float-start px-3 py-3 font-mono">{{ attr.name }}</h3>
-            <img class="inline w-16 h-16 float-right object-cover rounded-xl" :src="attr.img" :alt="attr.name">
-          </div>
-          <div class="m-1">
-            <p class="text-gray-400 hover:text-gray-50">
-              {{ attr.desc }}
-            </p>
-          </div>
-          <div class="inline p-1 m-1 gap-2">
-            <a class="float-right p-1 mx-1 text-center text-stone-950 bg-gray-300 rounded-md hover:bg-gray-500" :href="attr.web" target="_blank"><FontAwesomeIcon :icon="faUpRightFromSquare"/> 臺中觀光旅遊網</a>
-            <a class="float-right p-1 mx-1 text-center text-stone-950 bg-gray-300 rounded-md hover:bg-gray-500" :href="attr.map_link" target="_blank"><FontAwesomeIcon :icon="faMapPin"/> 地圖</a>
-          </div>
+      <ul class=" lg:grid lg:grid-cols-2 lg:gap-3 flex flex-col w-full list-none p-0 m-auto" >
+        <li class="p-2 rounded-xl m-auto w-full hover:bg-gray-100 dark:hover:bg-gray-600" v-for="attr in attraction_list" :key="attr.id">
+        <div class="p-3 m-3">
+          <h3 class="inline-block text-2xl font-bold float-start px-3 py-3 font-mono dark:text-white">{{ attr.name }}</h3>
+          <img class="inline-block w-16 h-16 float-right object-cover rounded-xl" :src="attr.img" :alt="attr.name">
+          <p class="inline-block p-2 my-1 dark:text-gray-300">
+            {{ attr.desc }}
+          </p>
+        </div>
+        <div class="inline gap-2">
+          <a class="float-right p-1 mx-1 mb-1 text-center text-stone-950 bg-gray-200 hover:bg-gray-400 dark:bg-gray-300 dark:hover:bg-gray-500 rounded-md" :href="attr.web" target="_blank"><FontAwesomeIcon :icon="faUpRightFromSquare"/> 臺中觀光旅遊網</a>
+          <a class="float-right p-1 mx-1 mb-1 text-center text-stone-950 bg-gray-200 hover:bg-gray-400 dark:bg-gray-300 dark:hover:bg-gray-500 rounded-md" :href="attr.map_link" target="_blank"><FontAwesomeIcon :icon="faMapPin"/> 地圖</a>
+        </div>
       </li>
       </ul>
     </div>
   </div>
 </template>
-
-<style scoped>
-@media (min-width: 1024px){
-  .attractions {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-  }
-}
-</style>
