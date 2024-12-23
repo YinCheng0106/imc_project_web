@@ -8,8 +8,8 @@ import DarkMode from './components/DarkMode.vue';
 <template >
   <header>
     <div>
-      <WebTitle msg="魅力台中" />
-      <DarkMode class="absolute top-2 right-2" />
+      <WebTitle class="my-4" msg="魅力台中" />
+      <DarkMode class="absolute m-4 top-2 right-2" />
     </div>
   </header>
   <main >
@@ -21,10 +21,6 @@ import DarkMode from './components/DarkMode.vue';
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
-
 .logo {
   display: block;
   margin: 0 auto 2rem;
