@@ -14,8 +14,8 @@
       @click="toggleDark()"
       class="p-2 m-2"
     >
-      <Moon class="text-gray-200" v-if="isDark" />
-      <Sun v-else />
+      <Moon class="text-gray-300 hover:text-white" v-if="isDark" />
+      <Sun class="text-black hover:text-gray-400" v-else />
     </button>
   </div>
 </template>
